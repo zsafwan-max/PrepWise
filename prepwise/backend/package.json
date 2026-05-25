@@ -1,0 +1,21 @@
+{
+  "name": "prepwise-backend",
+  "version": "1.0.0",
+  "description": "Express API for the PrepWise study plan optimizer.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "express",
+    "dynamic-programming",
+    "study-planner"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

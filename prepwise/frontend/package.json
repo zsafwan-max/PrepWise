@@ -1,0 +1,26 @@
+{
+  "name": "prepwise-frontend",
+  "version": "1.0.0",
+  "description": "React frontend for the PrepWise study plan optimizer.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "study-planner"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "vite": "^8.0.14"
+  }
+}
