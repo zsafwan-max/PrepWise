@@ -76,12 +76,12 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-        <p className="eyebrow">Dynamic programming study planner</p>
+        <p className="eyebrow">Simple exam study planner</p>
         <h1>PrepWise</h1>
         <p>
-          Build an optimized study plan before your exam. PrepWise uses a
-          knapsack-style algorithm to prioritize the topics that give you the
-          strongest readiness score within your available study time.
+          Build a clear study plan before your exam. Add your topics, rate how
+          important they are, and PrepWise will suggest what to review first
+          based on the time you have.
         </p>
       </section>
 
@@ -99,7 +99,7 @@ function App() {
                 type="text"
                 value={examName}
                 onChange={(event) => setExamName(event.target.value)}
-                placeholder="Algorithms Final"
+                placeholder="Biology Midterm"
               />
             </label>
 
@@ -128,7 +128,7 @@ function App() {
           <div className="section-heading">
             <p className="eyebrow">Step 2</p>
             <h2>Add topics</h2>
-            <p>Rate each topic from 1 to 5 so the algorithm can compare trade-offs.</p>
+            <p>Rate each topic from 1 to 5 so PrepWise can understand what needs the most attention.</p>
           </div>
 
           <TopicForm onAddTopic={addTopic} />

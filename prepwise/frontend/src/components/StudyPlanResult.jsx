@@ -6,7 +6,7 @@ function TopicResultCard({ topic }) {
         <p>{topic.reason}</p>
       </div>
       <div className="score-pill">
-        Score {topic.priorityScore}
+        Focus level {topic.priorityScore}
       </div>
       {topic.suggestedHours && (
         <div className="hours-pill">
@@ -25,14 +25,14 @@ function StudyPlanResult({ result }) {
   return (
     <section className="card results-card">
       <div className="section-heading">
-        <p className="eyebrow">Optimized study plan</p>
+        <p className="eyebrow">Your study plan</p>
         <h2>{result.examName}</h2>
         {result.examDate && <p>Exam date: {result.examDate}</p>}
       </div>
 
       <div className="summary-grid">
         <div>
-          <span>Total score</span>
+          <span>Readiness score</span>
           <strong>{result.totalPriorityScore}</strong>
         </div>
         <div>

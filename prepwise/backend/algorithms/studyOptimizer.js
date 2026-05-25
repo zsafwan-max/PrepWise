@@ -3,7 +3,7 @@ function calculatePriorityScore(topic) {
 }
 
 function buildSelectionReason(topic) {
-  return `${topic.name} was selected because it has importance ${topic.importance}/5, difficulty ${topic.difficulty}/5, and confidence ${topic.confidence}/5. Higher importance, harder topics, and lower confidence increase its priority score.`;
+  return `${topic.name} was selected because it has importance ${topic.importance}/5, difficulty ${topic.difficulty}/5, and confidence ${topic.confidence}/5. These answers make it a strong topic to review first.`;
 }
 
 function optimizeStudyPlan({ examName, examDate, totalHours, topics }) {
@@ -77,14 +77,14 @@ function optimizeStudyPlan({ examName, examDate, totalHours, topics }) {
       difficulty: topic.difficulty,
       confidence: topic.confidence,
       priorityScore: topic.priorityScore,
-      reason: `${topic.name} was skipped because the study plan had limited hours and another combination produced a higher total priority score.`,
+      reason: `${topic.name} was skipped because the study plan had limited hours and other topics fit your available time better.`,
     }));
 
   const totalHoursUsed = selectedTopics.reduce((sum, topic) => sum + topic.suggestedHours, 0);
   const totalPriorityScore = dp[topicCount][capacity];
 
   const explanation = selectedTopics.length > 0
-    ? `PrepWise selected ${selectedTopics.length} topic(s) for ${examName} using a dynamic programming approach similar to 0/1 knapsack. The plan uses ${totalHoursUsed} of ${totalHours} available hour(s) and maximizes the total priority score.`
+    ? `PrepWise selected ${selectedTopics.length} topic(s) for ${examName}. The plan uses ${totalHoursUsed} of ${totalHours} available hour(s) and focuses on the topics that need the most attention.`
     : `PrepWise could not select any topics for ${examName} because each topic needs more hours than the available study time.`;
 
   return {

@@ -45,7 +45,7 @@ function TopicForm({ onAddTopic }) {
             type="text"
             value={topic.name}
             onChange={handleChange}
-            placeholder="Dynamic Programming"
+            placeholder="Chapter 4 review"
             required
           />
         </label>
